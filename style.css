@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
 }
 
-/* ===== МОБИЛЬНАЯ ОСНОВА ===== */
+/* ОСНОВА — МОБИЛЬНАЯ */
 body {
     min-height: 100vh;
     background: url("bg-mobile.jpg") no-repeat center center;
@@ -14,78 +14,66 @@ body {
     color: #ffffff;
 }
 
-/* затемнение фона */
+/* ЗАТЕМНЕНИЕ ДЛЯ ЧИТАЕМОСТИ */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0,0,0,0.55);
     z-index: -1;
 }
 
-/* ===== КОНТЕЙНЕР ===== */
+/* КОНТЕЙНЕР */
 .container {
     max-width: 420px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-/* ===== АВАТАР ===== */
+/* АВАТАР */
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 25px;
-
-    /* ОБЪЕМ */
-    box-shadow: 
-        0 15px 25px rgba(0, 0, 0, 0.6),   /* тень вниз */
-        0 0 0 4px rgba(255, 255, 255, 0.08); /* мягкое свечение */
+    margin-bottom: 20px;
 }
 
-/* ===== ЗАГОЛОВОК ===== */
+/* ЗАГОЛОВОК */
 h1 {
     font-size: 28px;
     margin-bottom: 6px;
     letter-spacing: 1px;
 }
 
-/* ===== ПОДЗАГОЛОВОК ===== */
+/* ПОДЗАГОЛОВОК */
 .subtitle {
     font-size: 14px;
     opacity: 0.7;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-/* ===== КНОПКИ ===== */
+/* КНОПКИ */
 .btn {
     display: block;
     width: 100%;
     text-decoration: none;
     color: white;
     padding: 18px;
-    margin-bottom: 18px;
-    border-radius: 16px;
-
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-
+    margin-bottom: 16px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(6px);
     font-size: 16px;
-    transition: all 0.2s ease;
-
-    /* ОБЪЕМ */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
 }
 
-/* эффект нажатия */
 .btn:active {
-    transform: translateY(4px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0.97);
 }
 
-/* ===== ПК ВЕРСИЯ ===== */
+/* ПК — чуть аккуратнее */
 @media (min-width: 769px) {
     body {
         background: #0f0f0f;
