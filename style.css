@@ -1,13 +1,11 @@
-/* Сброс */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Фон */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: url("bg-mobile.jpg") no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
@@ -16,11 +14,12 @@ body {
     color: white;
 }
 
-/* Контейнер — БЕЗ стеклянного квадрата */
+/* Контейнер */
 .container {
     width: 90%;
     max-width: 420px;
     text-align: center;
+    animation: fadeIn 1s ease;
 }
 
 /* Аватар */
@@ -32,30 +31,27 @@ body {
     margin-bottom: 20px;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.7),
-        0 0 30px rgba(0, 132, 255, 0.6);
+        0 15px 40px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(0, 132, 255, 0.7);
 
     transition: 0.3s;
 }
 
 .avatar:hover {
     transform: scale(1.06);
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.9),
-        0 0 45px rgba(0, 132, 255, 0.9);
 }
 
 /* Заголовок */
 h1 {
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: 1px;
 }
 
 /* Подзаголовок */
 .subtitle {
-    opacity: 0.7;
+    opacity: 0.6;
     margin-bottom: 30px;
     font-size: 14px;
 }
@@ -71,18 +67,35 @@ h1 {
     font-size: 16px;
 
     background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
     color: white;
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.7),
-        0 0 20px rgba(0, 132, 255, 0.5);
+        0 0 20px rgba(0, 132, 255, 0.4);
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     transform: translateY(-4px);
     box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.9),
-        0 0 35px rgba(0, 132, 255, 0.9);
+        0 20px 50px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(0, 132, 255, 0.8);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
